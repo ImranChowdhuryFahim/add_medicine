@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <title>Add Medicine</title>
+    <head><link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAwrIFALPNWgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEREQAAAAAAEiIhAAAAAAASIiEAAAAAABIiIQAAAAAAEiIhAAABERESIiEREREiIiIiIiIiESIiIiIiIiIRIiIiIiIiIhEiIiIiIiIiEREREiIhEREQAAASIiEAAAAAABIiIQAAAAAAEiIhAAAAAAASIiEAAAAAABEREQAAD4HwAA+B8AAPgfAAD4HwAA+B8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPgfAAD4HwAA+B8AAPgfAAD4HwAA" rel="icon" type="image/x-icon" /></head>
+<style>
+
+h1{
+    text-align: center;
+    color: teal;
+    
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+
+<h1>Add Medicine</h1>
+
+<div id="msg" style="padding: 1px; border-radius: 5px;
+background-color: #f2f2f2;"></div>
+
+
+<div>
+  <form action="/" method="POST">
+    <label for="trade_name">Trade Name</label>
+    <input type="text" id="trade_name" name="trade_name" placeholder="Enter trade name.." required="required" data-validation-required-message="Please enter trade name.">
+
+    <label for="composition">Composition</label>
+    <input type="text" id="composition" name="composition" placeholder="Enter composition.." required="required" data-validation-required-message="Please enter composition.">
+
+    <label for="trade_dose">Trade Dose</label>
+    <input type="text" id="trade_dose" name="trade_dose" placeholder="Enter trade dose.."  required="required" data-validation-required-message="Please enter trade dose.">
+
+    <label for="company_name">Company Name</label>
+    <input type="text" id="company" name="company" placeholder="Enter company name.."  required="required" data-validation-required-message="Please enter company name.">
+
+    <label for="generic_name">Generic Name</label>
+    <input type="text" id="generic_name" name="generic_name" placeholder="Enter generic name.."  required="required" data-validation-required-message="Please enter generic name.">
+
+    <label for="comments">Comments</label>
+    <input type="text" id="comments" name="comments" placeholder="Enter comments..">
+
+    <label for="pack_size">Pack Size</label>
+    <input type="text" id="pack_size" name="pack_size" placeholder="Enter pack size.." >
+
+    <label for="details">Details</label>
+    <input type="text" id="details" name="details" placeholder="Enter details..">
+    
+
+
+
+    
+  
+    <input type="submit" value="Add Medicine" onclick="add()">
+  </form>
+</div>
+
+<script>
+  let msg="<%= msg %>";
+  console.log(msg)
+
+  if(msg=="success")
+  {
+     document.getElementById("msg").innerHTML="<h2 style=' color:#45a049'>The Medicine has been added successfully</h2>"
+  }
+  else if(msg=="failed")
+  {
+    document.getElementById("msg").innerHTML="<h2 style=' color:#e34646'>The Medicine already exists</h2>"
+  }
+</script>
+
+</body>
+</html>
+

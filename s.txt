@@ -1,0 +1,24 @@
+//const db=new sqlite3.Database('vetcription.db');
+
+// db.serialize(function()
+// {
+//     db.run("CREATE TABLE IF NOT EXISTS vet_data (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, trade_name text,composition text,trade_dose text,company text,generic_name text,comments text,pack_size text,details text)");
+
+//     var stmt= db.prepare("INSERT INTO vet_data VALUES(5,'Ielmex','600mg','1b/80kg','Reneta','Albendazole','Bolus','','')");
+//     stmt.run(function(err)
+//     {
+//         if(err)
+//         {
+//             console.log("error hoiche")
+//         }
+//     });
+//     stmt.finalize();
+
+//     db.each("select * from vet_data",function(err,row){
+//         console.log(row)
+
+//     })
+
+// });
+
+// db.close();
